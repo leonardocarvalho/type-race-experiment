@@ -1,0 +1,12 @@
+<div>
+  <div ng-if="status == 'started'">
+    <span>Go go go [[ player.name ]]</span>
+    <span>Your current progress is [[ player.progress ]]</span>
+  </div>
+  <div ng-if="status == 'finished' && winner.id != player.id">
+    Perdeu!!! Lerdo... =(
+  </div>
+  <div ng-if="status == 'finished' && winner.id == player.id">
+    Ganhou!!! Parabéns
+  </div>
+</div>

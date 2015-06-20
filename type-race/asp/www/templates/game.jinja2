@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Experiment type race</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,latin-ext"
+          rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
+    <script type="text/javascript" src="/static/app.js"></script>
+  </head>
+  <body>
+    <div ng-app="type-race">
+      <div ng-controller="gameController">
+        <div class="invite">
+          To invite friends tell to to enter: [[ urlService.inviteUrl() ]]
+        </div>
+        <div class="score-board" tr-scoreboard="[[ gameId ]]"></div>
+        <div class="status" tr-progress-status="[[ userId ]]"></div>
+        <div class="type-main" tr-text-track></div>
+      </div>
+    </div>
+    <script id="state-data" type="text/raw">
+    {
+      "userId": {{ user_id | to_json | safe }},
+      "gameId": {{ game_id | to_json | safe }}
+    }
+    </script>
+  </body>
+
+</html>

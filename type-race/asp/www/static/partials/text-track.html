@@ -1,0 +1,9 @@
+<div>
+  <p class="game-text">
+    <span class="right-text" ng-bind="rightText" ng-if="rightText"></span>
+    <span class="wrong-text" ng-bind="wrongText" ng-if="wrongText"></span>
+    <span class="other-text" ng-bind="otherText" ng-if="otherText"></span>
+  </p>
+  <textarea ng-disabled="status != 'started'" ng-model="textInput">
+  </textarea>
+</div>
